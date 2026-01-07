@@ -1,21 +1,27 @@
 # Distributed Rate Limiter & API Gateway
 
 ## Overview
-This project implements a distributed rate-limiting system to control API traffic and prevent overload. It demonstrates concurrency-safe design and performance optimization for backend systems.
+A Java-based rate limiting system implementing the Token Bucket algorithm
+to control API traffic and prevent request bursts.
 
 ## Tech Stack
 - Java
-- Redis (for shared state)
-- REST APIs
+- ConcurrentHashMap
+- Token Bucket Algorithm
+
+## Design
+- Each user is assigned a token bucket
+- Requests consume tokens
+- Excess requests are blocked
+- Thread-safe for concurrent access
 
 ## Features
-- Token bucket-based rate limiting
-- Concurrency-safe request handling
-- Load protection for backend APIs
-- Performance logging
+- Token bucket rate limiting
+- Thread-safe request handling
+- Simulates API gateway behavior
 
-## Key Learnings
-- Distributed system concepts
-- Concurrency handling
-- Performance optimization and scalability
+## How to Run
+1. Compile all Java files
+2. Run MainApplication.java
+
 
